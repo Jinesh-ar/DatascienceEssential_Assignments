@@ -1,0 +1,36 @@
+
+
+
+*** THIS IS THE TEXT DOCUMENTS FOR ANSWER TO THE ASSIGNMENT 1 , DATASCIENCE ESSENTIAL COURSE ***
+
+1) answer to the first question of the assignment 1 is
+ RAINBOW
+ 
+ 
+2) 
+#answer to second question 
+ 
+string='Letsupgrade'
+print(string.upper())
+
+3)
+
+#answer to third question
+
+c=int(input("Enter cost price "))
+s=int(input("Enter selling price "))
+if (c>s):
+     print("Lose")
+elif (s>c):
+    print("profit")
+else :
+     print("neither")
+     
+4)
+
+#answer to fourth question
+
+euro=int(input("enter amount in euro :"))
+rupees=0
+rupees=euro*80
+print (rupees)
