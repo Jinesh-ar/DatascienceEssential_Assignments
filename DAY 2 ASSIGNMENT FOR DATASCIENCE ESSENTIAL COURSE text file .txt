@@ -1,0 +1,109 @@
+
+*****DAY 2 ASSIGNMENT FOR DATASCIENCE ESSENTIAL COURSE ******
+1)
+
+
+list1=[]
+print("Enter the 10 numbers :")
+for i in range(10):
+    number=int(input())
+    if number%2 ==0:
+         list1.append(number)
+print(list1)
+Enter the 10 numbers :
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+[2, 4, 6, 8, 10]
+
+2) List Comprehension
+
+
+In [ ]:
+# list comprehension
+In [11]:
+
+
+#suppose we have an array a
+a= [1,2,3,4,]
+# if we want to add an element in this array we can use a function called "append()"
+# adding elemet '5' to a 
+a.append(5)
+print(a)
+[1, 2, 3, 4, 5]
+
+
+# and if we want to create an array b = [2,4,6,9,10] from a= [1,2,3,4,]
+# we can use the same append() function here
+a= [1,2,3,4,]
+b=[]
+for x in a:
+    b.append(x*2)
+print(b)
+[2, 4, 6, 8]
+
+# we can perform this operation with list comprehension
+# for example if we want to create the same list [2,4,6,9,10] from a= [1,2,3,4,]
+a= [1,2,3,4,]
+d=[]
+d=[x*2 for x in a]
+print(d)
+[2, 4, 6, 8]
+
+# the list comprehension methid is more symple in syntex and easy to code.
+
+
+
+3) Answer for qn no. 3
+
+#given a number n, you have to write a program that generates a dictionary d 
+#which contains (i, i*i), where i is from 1 to n (both included).
+
+n=int(input("enter n"))
+square_dict = {i: i*i for i in range(1,n+1)}
+print(square_dict)
+
+enter n4
+{1: 1, 2: 4, 3: 9, 4: 16}
+
+
+4)
+#Write a program to compute the distance between the current position after
+#a sequence of movement and original point.
+
+import math
+pos=[0,0]
+moves={"UP":[0,1],
+       "DOWN":[0,-1],
+       "LEFT":[-1,0],
+       "RIGHT":[1,0]}
+n=int(input("Enter Number of Directions "))
+data=[ input("Enter Direction UP/DOWN/LEFT/RIGHT spaced steps") for i in range(n)]
+
+for inp in data:
+    parts=inp.split()    
+    mv=parts[0]
+    val=parts[1]
+    if mv in moves and val.isnumeric():
+        pos[0] += moves[mv][0]*int(val)
+        pos[1] += moves[mv][1]*int(val)
+    
+distance=math.sqrt(pos[0]**2 + pos[1]**2)
+print(round(distance))
+
+
+out put 
+
+Enter Number of Directions 4
+Enter direction UP/DOWN/LEFT/RIGHT spaced stepsUP 5
+Enter direction UP/DOWN/LEFT/RIGHT spaced stepsDOWN 3
+Enter direction UP/DOWN/LEFT/RIGHT spaced stepsLEFT 3
+Enter direction UP/DOWN/LEFT/RIGHT spaced stepsRIGHT 2
+2
